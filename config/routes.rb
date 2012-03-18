@@ -1,5 +1,6 @@
 Uploader::Application.routes.draw do
   resources :users
+  post "users/photo" => 'users#photo'
   root :to => 'users#index'
   match "/images/uploads/*path" => "users#serve"
 
